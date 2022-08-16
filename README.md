@@ -14,13 +14,47 @@ FlexLayout 연습 레포
     - redView, orangeView, yellowView, greenView, blueView, purpleView, grayView
 
 ## Examples
-CustomView
+### 공통
 ```swift
-    func addSubviews() {
-        addSubview(rootFlexContainer)
-        addSubviews(redView)
+// ViewController.swift
+import UIKit
+import PinLayout
+import FlexLayout
+
+class ViewController: UIViewController {
+    // MARK: - UI
+    let customView = CustomView()
+    
+    // MARK: - View Life-Cycle
+    
+    override func loadView() {
+        view = customView
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    // PinLayout을 통해 container의 layout을 먼저 잡아준 후, flex를 통해 하위뷰들의 layout을 잡아준다.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let safeArea = customView.rootFlexContainer.pin.safeArea
+        
+        customView.rootFlexContainer.pin.all(safeArea) // flexbox container의 layout 설정
+        customView.rootFlexContainer.flex.layout() // flex.layout()을 통해 flexbox의 하위뷰들의 layout 설정
+    }
+    
+    // MARK: - ETC
+
+}
+```
+
+### 1)
+<img width=200 src="https://user-images.githubusercontent.com/59866819/184800162-32e89c92-f239-47b4-99b1-e0f28fe458c7.png">
+
+```swift
     func setLayout() {
         rootFlexContainer.flex.direction(.column).padding(12).define { flex in
             flex.addItem().direction(.row).define { flex in
@@ -30,6 +64,35 @@ CustomView
     }
 ```
 
+### 2)
+<img width=200 src="https://user-images.githubusercontent.com/59866819/184800091-498a9702-3889-4fb1-9fef-6fc3b036532b.png">
+
+```swift
+    func setLayout() {
+        rootFlexContainer.backgroundColor = .lightGray
+        
+        rootFlexContainer.flex.direction(.column).padding(12).define {
+            // 최상단 row에 redView, orangeView 추가
+            $0.addItem().direction(.row).define {
+                $0.addItem(redView).width(100).aspectRatio(1.5)
+                $0.addItem(orangeView).width(100).aspectRatio(1.5)
+                
+                $0.backgroundColor(.white)
+            }
+            
+            // 그 아래 row에 greenView, blueView를 같은 너비로 추가
+            $0.addItem().direction(.row).marginTop(10).define {
+                $0.addItem(greenView).height(150).grow(1)
+                $0.addItem(blueView).height(150).grow(1)
+                
+                $0.backgroundColor(.white)
+            }
+        }
+    }
+```
+
+
+## 관련 메서드/프로퍼티
 ### Flex
 ```swift
 public class Flex
