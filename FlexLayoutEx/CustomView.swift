@@ -95,18 +95,34 @@ class CustomView: UIView {
     
     func addSubviews() {
         addSubview(rootFlexContainer)
-        addSubviews([redView, orangeView])
+        addSubviews([redView, orangeView, yellowView, greenView, blueView])
+        addSubviews([firstLabel, secondLabel])
+        
         // addSubviews([redView, orangeView, yellowView, greenView, blueView, purpleView, grayView])
         // addSubviews([firstLabel, secondLabel, thirdLabel])
     }
     
     func setLayout() {
         rootFlexContainer.backgroundColor = .lightGray
-        
-        rootFlexContainer.flex.direction(.row).padding(12).define { flex in
-            flex.addItem().direction(.row).define { flex in
-                flex.addItem(redView).width(100).aspectRatio(1.5)
-                flex.addItem(orangeView).width(100).aspectRatio(1.5)
+    
+        rootFlexContainer.flex.direction(.column).padding(12).define {
+            $0.addItem(firstLabel)
+            
+            $0.addItem().direction(.row).marginTop(10).padding(20).define { // 첫번째 스택뷰와 내부뷰 사이의 padding 주기
+                $0.addItem(redView).height(50).grow(1)
+                $0.addItem(orangeView).height(50).grow(1)
+                $0.addItem(yellowView).height(50).grow(1)
+    
+                $0.backgroundColor(.white)
+            }
+    
+            $0.addItem(secondLabel).marginTop(20)
+            
+            $0.addItem().direction(.row).marginTop(10).define {
+                $0.addItem(greenView).height(150).grow(1)
+                $0.addItem(blueView).height(150).grow(1)
+    
+                $0.backgroundColor(.white)
             }
         }
     }

@@ -24,12 +24,13 @@ class ViewController: UIViewController {
         
     }
     
-    // PinLayout을 통해 container의 layout을 먼저 잡아준 후, flex를 통해 하위뷰들의 layout을 잡아준다.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        customView.rootFlexContainer.pin.all() // flexbox container의 layout 설정
-        customView.rootFlexContainer.flex.layout() // flex.layout()을 통해 flexbox의 하위뷰들의 layout 설정
+        let safeArea = customView.rootFlexContainer.pin.safeArea
+        
+        customView.rootFlexContainer.pin.all(safeArea)
+        customView.rootFlexContainer.flex.layout(mode: .adjustHeight)
     }
     
     // MARK: - ETC
