@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CAC4F352CF2CA069D86246C /* Pods_FlexLayoutEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214B7C4B4BF23B38B133A5CF /* Pods_FlexLayoutEx.framework */; };
 		AF931CE528AB31DC0085E88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF931CE428AB31DC0085E88C /* AppDelegate.swift */; };
 		AF931CE728AB31DC0085E88C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF931CE628AB31DC0085E88C /* SceneDelegate.swift */; };
 		AF931CE928AB31DC0085E88C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF931CE828AB31DC0085E88C /* ViewController.swift */; };
 		AF931CEC28AB31DC0085E88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF931CEA28AB31DC0085E88C /* Main.storyboard */; };
 		AF931CEE28AB31DD0085E88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF931CED28AB31DD0085E88C /* Assets.xcassets */; };
 		AF931CF128AB31DD0085E88C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF931CEF28AB31DD0085E88C /* LaunchScreen.storyboard */; };
-		AF931CFA28AB32770085E88C /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AF931CF928AB32770085E88C /* FlexLayout */; };
-		AF931CFC28AB32770085E88C /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = AF931CFB28AB32770085E88C /* FlexLayoutYoga */; };
-		AF931CFE28AB32770085E88C /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF931CFD28AB32770085E88C /* FlexLayoutYogaKit */; };
 		AF931D0028AB328F0085E88C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF931CFF28AB328F0085E88C /* CustomView.swift */; };
+		AF931D0228AB35280085E88C /* UIView++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF931D0128AB35280085E88C /* UIView++Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		214B7C4B4BF23B38B133A5CF /* Pods_FlexLayoutEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4391EA91B29BDC89F93B7D11 /* Pods-FlexLayoutEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutEx.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutEx/Pods-FlexLayoutEx.release.xcconfig"; sourceTree = "<group>"; };
+		594604BD9AA035BA5CFF58B7 /* Pods-FlexLayoutEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutEx.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutEx/Pods-FlexLayoutEx.debug.xcconfig"; sourceTree = "<group>"; };
 		AF931CE128AB31DC0085E88C /* FlexLayoutEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF931CE428AB31DC0085E88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF931CE628AB31DC0085E88C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +31,7 @@
 		AF931CF028AB31DD0085E88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF931CF228AB31DD0085E88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF931CFF28AB328F0085E88C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		AF931D0128AB35280085E88C /* UIView++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,20 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF931CFA28AB32770085E88C /* FlexLayout in Frameworks */,
-				AF931CFC28AB32770085E88C /* FlexLayoutYoga in Frameworks */,
-				AF931CFE28AB32770085E88C /* FlexLayoutYogaKit in Frameworks */,
+				9CAC4F352CF2CA069D86246C /* Pods_FlexLayoutEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		682F0CCC8710036AA668A891 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				594604BD9AA035BA5CFF58B7 /* Pods-FlexLayoutEx.debug.xcconfig */,
+				4391EA91B29BDC89F93B7D11 /* Pods-FlexLayoutEx.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		82310B50523029AA160E5052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				214B7C4B4BF23B38B133A5CF /* Pods_FlexLayoutEx.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF931CD828AB31DC0085E88C = {
 			isa = PBXGroup;
 			children = (
 				AF931CE328AB31DC0085E88C /* FlexLayoutEx */,
 				AF931CE228AB31DC0085E88C /* Products */,
+				682F0CCC8710036AA668A891 /* Pods */,
+				82310B50523029AA160E5052 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +89,7 @@
 				AF931CE628AB31DC0085E88C /* SceneDelegate.swift */,
 				AF931CE828AB31DC0085E88C /* ViewController.swift */,
 				AF931CFF28AB328F0085E88C /* CustomView.swift */,
+				AF931D0128AB35280085E88C /* UIView++Extension.swift */,
 				AF931CEA28AB31DC0085E88C /* Main.storyboard */,
 				AF931CED28AB31DD0085E88C /* Assets.xcassets */,
 				AF931CEF28AB31DD0085E88C /* LaunchScreen.storyboard */,
@@ -83,20 +105,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF931CF528AB31DD0085E88C /* Build configuration list for PBXNativeTarget "FlexLayoutEx" */;
 			buildPhases = (
+				89E0971284D2682315F8DC69 /* [CP] Check Pods Manifest.lock */,
 				AF931CDD28AB31DC0085E88C /* Sources */,
 				AF931CDE28AB31DC0085E88C /* Frameworks */,
 				AF931CDF28AB31DC0085E88C /* Resources */,
+				41F9ED81F421767181437900 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlexLayoutEx;
-			packageProductDependencies = (
-				AF931CF928AB32770085E88C /* FlexLayout */,
-				AF931CFB28AB32770085E88C /* FlexLayoutYoga */,
-				AF931CFD28AB32770085E88C /* FlexLayoutYogaKit */,
-			);
 			productName = FlexLayoutEx;
 			productReference = AF931CE128AB31DC0085E88C /* FlexLayoutEx.app */;
 			productType = "com.apple.product-type.application";
@@ -125,9 +144,6 @@
 				Base,
 			);
 			mainGroup = AF931CD828AB31DC0085E88C;
-			packageReferences = (
-				AF931CF828AB32770085E88C /* XCRemoteSwiftPackageReference "FlexLayout" */,
-			);
 			productRefGroup = AF931CE228AB31DC0085E88C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,6 +166,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41F9ED81F421767181437900 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutEx/Pods-FlexLayoutEx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutEx/Pods-FlexLayoutEx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutEx/Pods-FlexLayoutEx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89E0971284D2682315F8DC69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexLayoutEx-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF931CDD28AB31DC0085E88C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -157,6 +215,7 @@
 			files = (
 				AF931CE928AB31DC0085E88C /* ViewController.swift in Sources */,
 				AF931D0028AB328F0085E88C /* CustomView.swift in Sources */,
+				AF931D0228AB35280085E88C /* UIView++Extension.swift in Sources */,
 				AF931CE528AB31DC0085E88C /* AppDelegate.swift in Sources */,
 				AF931CE728AB31DC0085E88C /* SceneDelegate.swift in Sources */,
 			);
@@ -300,6 +359,7 @@
 		};
 		AF931CF628AB31DD0085E88C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594604BD9AA035BA5CFF58B7 /* Pods-FlexLayoutEx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,6 +388,7 @@
 		};
 		AF931CF728AB31DD0085E88C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4391EA91B29BDC89F93B7D11 /* Pods-FlexLayoutEx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,35 +437,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AF931CF828AB32770085E88C /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AF931CF928AB32770085E88C /* FlexLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF931CF828AB32770085E88C /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayout;
-		};
-		AF931CFB28AB32770085E88C /* FlexLayoutYoga */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF931CF828AB32770085E88C /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayoutYoga;
-		};
-		AF931CFD28AB32770085E88C /* FlexLayoutYogaKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF931CF828AB32770085E88C /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayoutYogaKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF931CD928AB31DC0085E88C /* Project object */;
 }
