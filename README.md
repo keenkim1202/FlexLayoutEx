@@ -4,6 +4,7 @@ FlexLayout 연습 레포
 ## 참고
 - [FlexLayout - github](https://github.com/layoutBox/FlexLayout#installation)
 - [FlexLayout Docs](https://layoutbox.github.io/FlexLayout/1.1/Classes/Flex.html#/s:10FlexLayout0A0C7addItemACyF)
+- [PinLayout - github](https://github.com/layoutBox/PinLayout)
 
 ## 커스텀뷰 구성
 - 루트 컨테이너 1개
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let safeArea = customView.rootFlexContainer.pin.safeArea
+        let safeArea = customView.rootFlexContainer.pin.safeArea // safeArea를 지정해주지 않고 실행하면, 화면 상단의 status bar를 침범하게 된다! (그렇게 뷰를 그리는게 의도라면 safeArea를 아래의 all() 안에 작성해주지 않아도 된다.
         
         customView.rootFlexContainer.pin.all(safeArea) // flexbox container의 layout 설정
         customView.rootFlexContainer.flex.layout() // flex.layout()을 통해 flexbox의 하위뷰들의 layout 설정
